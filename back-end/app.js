@@ -1,10 +1,19 @@
-/*imports */
-const Logger = require("./logger");
-const logger = new Logger();
+const dotenv = require("dotenv");
+dotenv.config();
 
-logger.on("signalToListen", ({ eventId, url }) => {
-  console.log("Doing something hmmm...");
-  console.log(eventId, url);
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Hello world");
 });
 
-logger.log({ eventId: 5, url: "https://sus" });
+app.get("/api/courses", (req, res) => {
+  res.send("SUS");
+});
+
+// PORT
+//const port = process.env.PORT || 3000;
+app.listen(process.env.PORT, () =>
+  console.log(`Listening on ${process.env.PORT}...`)
+);
