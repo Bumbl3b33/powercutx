@@ -1,11 +1,11 @@
 /*imports */
 const EventEmitter = require("events");
 
-class customLogger extends EventEmitter {
+class Logger extends EventEmitter {
   /*Log an event */
   log = (args) => {
     this.emit("signalToListen", args);
   };
 }
 
-module.exports - customLogger;
+module.exports = Logger;
