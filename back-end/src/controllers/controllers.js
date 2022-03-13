@@ -14,7 +14,7 @@ const getDistricts = async (req, res) => {
 };
 
 const getOutagesBetweenDates = async (req, res) => {
-  const { error } = validateDates(req.body);
+  const { error } = validateDates(req.params);
   if (error) return res.status(400).send(error.details[0].message);
 
   //Validation passed...
@@ -22,8 +22,8 @@ const getOutagesBetweenDates = async (req, res) => {
     const pool = await getConnection();
     const result = await pool
       .request()
-      .input("StartDate", sql.Date, req.body.StartDate)
-      .input("EndDate", sql.Date, req.body.EndDate)
+      .input("StartDate", sql.Date, req.params.StartDate)
+      .input("EndDate", sql.Date, req.params.EndDate)
       .query(queries.getAllOutagesbyDate);
     res.json(result.recordset);
   } catch (error) {

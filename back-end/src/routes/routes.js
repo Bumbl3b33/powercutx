@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 router.get("/api/districts", getDistricts);
 
 /* Get All Outages in Districts */
-router.get("/api/outages", getOutagesBetweenDates);
+router.get("/api/outages/:StartDate&:EndDate", getOutagesBetweenDates);
 
 /* Add Outage from user */
 router.post("/api/outages", addOutage);
