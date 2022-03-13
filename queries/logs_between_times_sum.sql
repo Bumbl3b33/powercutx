@@ -4,9 +4,9 @@ DECLARE @EndDate AS DATE = '2022-03-12';
 
 -- DO NOT MODIFY BEYOND THIS
 
-SELECT DistrictName, COUNT(Logs.DistrictId) AS Total FROM Logs
+SELECT [Districts].DistrictId, COUNT(Logs.DistrictId) AS Total FROM Logs
 INNER JOIN Districts ON Logs.DistrictId = Districts.DistrictId
 INNER JOIN Provinces ON Districts.DistrictId = Provinces.ProvinceId
 WHERE LogDate BETWEEN @StartDate and @EndDate
-GROUP BY DistrictName;
+GROUP BY [Districts].DistrictId;
 GO
