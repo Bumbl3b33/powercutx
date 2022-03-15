@@ -1,0 +1,29 @@
+.map {
+  background: blue;
+  width: 28%;
+  margin: auto;
+}
+
+.map path {
+  fill: hsl(0, 0%, 23%);
+  stroke: #dece0c;
+  stroke-width: 5px;
+  transition: fill 0.3s;
+}
+
+.kandy:hover {
+  transform-origin: 50% 50%;
+  animation: path-grow ease-out 500ms;
+}
+
+@keyframes path-grow {
+  0% {
+    transform: scaleZ(1);
+  }
+  50% {
+    transform: scaleY(1.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}

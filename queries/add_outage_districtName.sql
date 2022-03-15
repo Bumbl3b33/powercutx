@@ -1,11 +1,19 @@
----Adds Log to Logs table
-DECLARE @OutageDistrictId AS INT = 13;
+---Adds Log to Logs table (O(2n))
+DECLARE @OutageDistrictName AS NVARCHAR(128) = 'Kandy';
+DECLARE @OutageDistrictId AS INT;
+-- IF EXISTS ( SELECT 1 FROM Districts WHERE DistrictName = @OutageDistrictName)    
+-- BEGIN
+--     INSERT INTO Logs (DistrictId, LogDate,LogTime ) 
+--     SELECT DistrictId, GETDATE(),GETDATE() FROM Districts
+--     WHERE DistrictName = @OutageDistrictName
+-- END
 
----Assuming int/sql injection protection is complete
----Assuming int is between 1 - 25
 
-INSERT INTO Logs
-(DistrictId, LogDate,LogTime )
-VALUES
-(@OutageDistrictId,GETDATE(),GETDATE())
-GO
+--Testing
+SELECT DistrictId FROM Districts WHERE DistrictName = @OutageDistrictName;
+-- IF EXISTS ( SELECT DistrictId = @id FROM Districts WHERE DistrictName = @OutageDistrictName)    
+-- BEGIN
+--     INSERT INTO Logs (DistrictId, LogDate,LogTime ) 
+--     SELECT DistrictId, GETDATE(),GETDATE() FROM Districts
+--     WHERE DistrictName = @OutageDistrictName
+-- END
