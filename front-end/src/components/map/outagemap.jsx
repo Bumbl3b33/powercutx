@@ -3,10 +3,12 @@ import "./outagemap.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Loading from "../common/loading";
+import { useMetadata } from "../../contexts/DistrictsContext";
 
 const OutageMap = () => {
   const [outages, setOutages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { districts } = useMetadata();
 
   useEffect(() => {
     axios
@@ -23,13 +25,16 @@ const OutageMap = () => {
       {!loading && (
         <div>
           <p>Here are the outages since the Big Bang! 😲</p>
-          {outages.map((outage) => {
-            return (
-              <p>
-                {outage?.DistrictId},{outage?.Total}
-              </p>
-            );
-          })}
+          <table>
+            {outages.map(({ DistrictName, Total }) => {
+              return (
+                <tr>
+                  <th>{DistrictName}</th>
+                  <th>{Total}</th>
+                </tr>
+              );
+            })}
+          </table>
         </div>
       )}
     </>

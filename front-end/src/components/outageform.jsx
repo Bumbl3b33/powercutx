@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "./common/loading";
+import { useMetadata } from "../contexts/DistrictsContext";
 
 const OutageForm = () => {
   const [myDistrict, setMyDistrict] = useState("");
-  const [districts, setDistricts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { districts, loading } = useMetadata();
 
   const handleChange = (e) => {
     setMyDistrict(e.target.value);
@@ -14,13 +14,6 @@ const OutageForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-
-  useEffect(() => {
-    axios.get(`http://localhost:5000/api/districts`).then((res) => {
-      setDistricts(res.data);
-    });
-    setLoading(false);
-  }, []);
 
   return (
     <>
