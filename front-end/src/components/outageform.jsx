@@ -4,15 +4,29 @@ import Loading from "./common/loading";
 import { useMetadata } from "../contexts/DistrictsContext";
 
 const OutageForm = () => {
-  const [myDistrict, setMyDistrict] = useState("");
+  const [myDistrict, setMyDistrict] = useState("1");
   const { districts, loading } = useMetadata();
 
   const handleChange = (e) => {
     setMyDistrict(e.target.value);
   };
 
+  const sendOutage = (districtId) => {
+    axios
+      .post("http://localhost:5000/api/outages", {
+        DistrictId: districtId,
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    sendOutage(myDistrict);
   };
 
   return (

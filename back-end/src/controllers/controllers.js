@@ -43,6 +43,7 @@ const addOutage = async (req, res) => {
       .request()
       .input("DistrictId", sql.Int, req.body.DistrictId)
       .query(queries.addNewOutage);
+    console.log(result);
     res.json("Submitted your outage");
   } catch (error) {
     res.status(500).send(error);

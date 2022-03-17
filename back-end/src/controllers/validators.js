@@ -19,7 +19,7 @@ const validateDates = (dates) => {
         .min("01-03-2022")
         .max(Joi.ref("EndDate"))
         .required(),
-      EndDate: Joi.date().max("now").required(),
+      EndDate: Joi.date().required(),
     });
 
     return schema.validate(dates);

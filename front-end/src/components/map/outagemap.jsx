@@ -12,9 +12,12 @@ const OutageMap = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/outages/2022-03-01&2022-03-12`)
+      .get(`http://localhost:5000/api/outages/2022-03-01&2022-03-18`)
       .then((res) => {
         setOutages(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
       });
     setLoading(false);
   }, []);
@@ -22,19 +25,17 @@ const OutageMap = () => {
   return (
     <>
       {loading && <Loading />}
+      {/* TODO: if outages is empty ( ) */}
       {!loading && (
         <div>
           <p>Here are the outages since the Big Bang! 😲</p>
-          <table>
-            {outages.map(({ DistrictName, Total }) => {
-              return (
-                <tr>
-                  <th>{DistrictName}</th>
-                  <th>{Total}</th>
-                </tr>
-              );
-            })}
-          </table>
+          {outages.map(({ DistrictName, Total }, index) => {
+            return (
+              <li key={index}>
+                {DistrictName} - {Total}
+              </li>
+            );
+          })}
         </div>
       )}
     </>

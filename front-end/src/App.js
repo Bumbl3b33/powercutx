@@ -11,7 +11,7 @@ function App() {
       <DistrictsProvider>
         <OutageMap />
         <OutageForm />
-        <Test />
+        {/* <Test /> */}
       </DistrictsProvider>
     </>
   );

@@ -11,7 +11,6 @@ export const DistrictsProvider = ({ children }) => {
   const [districts, setDistricts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  console.log("in provider");
   useEffect(() => {
     async function fetchData(params) {
       axios
