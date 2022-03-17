@@ -1,0 +1,70 @@
+/* Group 2
+.submit-box {
+  position: absolute;
+  width: 909px;
+  height: 201px;
+  left: -31px;
+  top: 600px;
+} */
+
+/* Rectangle 2 */
+.submit-box {
+  /* position: absolute;
+  width: 909px;
+  height: 201px;
+  top: 600px; */
+
+  background: #f1ff4d;
+  border-radius: 10px;
+}
+
+.submit-title {
+  /* Submit your outage: */
+  /* 
+  position: absolute;
+  width: 214px;
+  height: 35px;
+  left: 62px;
+  top: 636px; */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 28px;
+
+  color: #141414;
+}
+
+.dropdown-title {
+  /* Select Your District */
+
+  /* position: absolute;
+width: 256.04px;
+height: 83px;
+left: 62px;
+top: 693px; */
+
+  font-family: "Roboto";
+  font-style: normal;
+  /* font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex; */
+  align-items: center;
+  text-align: center;
+
+  color: #141414;
+}
+.dropdown-box {
+  /* Rectangle 3 */
+  /* 
+position: absolute;
+width: 513px;
+height: 83px;
+left: 62px;
+top: 693px; */
+
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}

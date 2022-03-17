@@ -1,22 +1,132 @@
+:root {
+  /* Default colours of svg */
+  --kan: #34eb62;
+  --mra: #34eb62;
+  --nuw: #34eb62;
+  --amp: #34eb62;
+  --bat: #34eb62;
+  --pol: #34eb62;
+  --tri: #34eb62;
+  --anu: #34eb62;
+  --vav: #34eb62;
+  --man: #34eb62;
+  --mul: #34eb62;
+  --jaf: #34eb62;
+  --kil: #34eb62;
+  --kur: #34eb62;
+  --put: #34eb62;
+  --rat: #34eb62;
+  --gal: #34eb62;
+  --ham: #34eb62;
+  --mle: #34eb62;
+  --bad: #34eb62;
+  --mon: #34eb62;
+  --keg: #34eb62;
+  --col: #34eb62;
+  --gam: #34eb62;
+  --kal: #34eb62;
+
+  /* --red: #eb3434;
+  --orange: #eb8c34;
+  --yellow: #e5eb34;
+  --green: #34eb62; */
+}
+
 .map {
-  background: blue;
   width: 28%;
   margin: auto;
+  display: flexbox;
 }
 
 .map path {
   fill: hsl(0, 0%, 23%);
-  stroke: #dece0c;
+  stroke: #141414;
   stroke-width: 5px;
   transition: fill 0.3s;
 }
 
-.kandy:hover {
-  transform-origin: 50% 50%;
-  animation: path-grow ease-out 500ms;
+.kan {
+  fill: var(--kan) !important;
 }
 
-@keyframes path-grow {
+.mle {
+  fill: var(--mle) !important;
+}
+.nuw {
+  fill: var(--nuw) !important;
+}
+.amp {
+  fill: var(--amp) !important;
+}
+.bat {
+  fill: var(--bat) !important;
+}
+.pol {
+  fill: var(--pol) !important;
+}
+.tri {
+  fill: var(--tri) !important;
+}
+.anu {
+  fill: var(--anu) !important;
+}
+.vav {
+  fill: var(--vav) !important;
+}
+.man {
+  fill: var(--man) !important;
+}
+.mul {
+  fill: var(--mul) !important;
+}
+.jaf {
+  fill: var(--jaf) !important;
+}
+.kil {
+  fill: var(--kil) !important;
+}
+.kur {
+  fill: var(--kur) !important;
+}
+.put {
+  fill: var(--put) !important;
+}
+.rat {
+  fill: var(--rat) !important;
+}
+.gal {
+  fill: var(--gal) !important;
+}
+
+.ham {
+  fill: var(--ham) !important;
+}
+.mra {
+  fill: var(--mra) !important;
+}
+.bad {
+  fill: var(--bad) !important;
+}
+.mon {
+  fill: var(--mon) !important;
+}
+.keg {
+  fill: var(--keg) !important;
+}
+.col {
+  fill: var(--col) !important;
+}
+.gam {
+  fill: var(--gam) !important;
+}
+.kal {
+  fill: var(--kal) !important;
+}
+/* .kandy:hover {
+  transform-origin: 50% 50%;
+  animation: path-grow ease-out 500ms;
+} 
+   @keyframes path-grow {
   0% {
     transform: scaleZ(1);
   }
@@ -26,4 +136,23 @@
   100% {
     transform: scaleY(1);
   }
+} */
+
+.section-desc {
+  font-family: "Roboto";
+  font-style: normal;
+}
+
+.outage-table {
+  font-family: "Roboto";
+  font-style: normal;
+  text-align: center;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  display: inline-table;
+}
+
+#table-headers {
+  text-align: center;
+  font-weight: bold;
 }

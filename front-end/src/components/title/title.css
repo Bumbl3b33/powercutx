@@ -1,0 +1,35 @@
+/* Powercutx */
+.page-title {
+  /* position: absolute;
+  width: 424px;
+  height: 104px;
+  left: 133px;
+  top: 111px; */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 89px;
+  line-height: 104px;
+  background-color: #141414;
+
+  color: #eeff2f;
+}
+
+/* See who else has no power in Sri Lanka. Share your story with everyone. */
+.page-desc {
+  /* position: absolute;
+  width: 579px;
+  height: 76px;
+  left: 133px;
+  top: 222px; */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  background-color: #141414;
+
+  color: #c4c4c4;
+}

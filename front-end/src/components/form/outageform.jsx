@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Loading from "./common/loading";
-import { useMetadata } from "../contexts/DistrictsContext";
+import Loading from "../common/loading";
+import { useMetadata } from "../../contexts/DistrictsContext";
+import "./outageform.css";
 
 const OutageForm = () => {
   const [myDistrict, setMyDistrict] = useState("1");
+  const [isDisabled, setIsDisabled] = useState(false);
   const { districts, loading } = useMetadata();
 
   const handleChange = (e) => {
@@ -26,6 +28,7 @@ const OutageForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsDisabled(true);
     sendOutage(myDistrict);
   };
 
@@ -33,13 +36,17 @@ const OutageForm = () => {
     <>
       {loading && <Loading />}
       {!loading && (
-        <div>
-          <h2>Outage Form</h2>
+        <div className="submit-box">
+          <div className="submit-title"> Submit your Outage </div>
 
           <form onSubmit={handleSubmit}>
-            <label>
+            <label className="dropdown-title">
               Select your district:
-              <select value={myDistrict} onChange={(e) => handleChange(e)}>
+              <select
+                value={myDistrict}
+                onChange={(e) => handleChange(e)}
+                className="dropdown-box"
+              >
                 {districts.map((district) => {
                   return (
                     <option
@@ -52,7 +59,11 @@ const OutageForm = () => {
                 })}
               </select>
             </label>
-            <input type="submit" value="Submit" />
+            <input
+              type="submit"
+              disabled={isDisabled}
+              value={isDisabled ? "Thanks for Submitting" : "Click to Submit"}
+            />
           </form>
         </div>
       )}
