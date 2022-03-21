@@ -2,7 +2,7 @@ import Title from "./components/title/title";
 import OutageForm from "./components/form/outageform";
 import { DistrictsProvider } from "./contexts/DistrictsContext";
 import React from "react";
-import Dashboard from "./components/map/dashboard";
+import Dashboard from "./components/dashboard/dashboard";
 function App() {
   return (
     <>

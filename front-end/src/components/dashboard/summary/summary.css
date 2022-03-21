@@ -1,0 +1,18 @@
+.section-desc {
+  font-family: "Roboto";
+  font-style: normal;
+}
+
+.outage-table {
+  font-family: "Roboto";
+  font-style: normal;
+  text-align: center;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  display: inline-table;
+}
+
+#table-headers {
+  text-align: center;
+  font-weight: bold;
+}
