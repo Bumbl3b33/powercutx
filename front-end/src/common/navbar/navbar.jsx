@@ -12,7 +12,7 @@ class NavBar extends React.Component {
     return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#">
+          <Navbar.Brand href="/">
             Powercut<span className="title-x">x</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -22,7 +22,7 @@ class NavBar extends React.Component {
               <Nav.Link href="#submit">Submit</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link href="/about">About</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

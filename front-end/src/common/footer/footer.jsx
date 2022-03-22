@@ -12,7 +12,7 @@ class Footer extends React.Component {
           Copyright &copy; {new Date().getFullYear()} - All Rights Reserved{" "}
         </span>
         <span className="myright-justified">
-          <a href="#"> Donate</a>
+          <a href="/donate"> Donate</a>
         </span>
       </Container>
     );
