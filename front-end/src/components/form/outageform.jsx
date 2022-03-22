@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Loading from "../common/loading";
+import Loading from "../../common/loading";
 import { useMetadata } from "../../contexts/DistrictsContext";
 import "./outageform.css";
 

@@ -1,10 +1,8 @@
-import "./summary.css";
-import axios from "axios";
+import "./outageSummary.css";
 import React, { Component } from "react";
-import ColouredMap from "../map/colouredMap";
 import Loading from "../../../common/loading";
 
-export default class Summary extends Component {
+export default class OutageSummary extends Component {
   render() {
     return (
       <>

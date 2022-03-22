@@ -1,8 +1,8 @@
 import "./dashboard.css";
 import axios from "axios";
 import React, { Component } from "react";
-import ColouredMap from "./map/colouredMap";
-import Summary from "./summary/summary";
+import OutageSummary from "./outageSummary/outageSummary";
+import OutageMap from "./outageMap/outageMap";
 
 export default class Dashboard extends Component {
   state = {
@@ -26,7 +26,7 @@ export default class Dashboard extends Component {
     this.setState({ ...this.state, loadingOutages: true });
 
     axios
-      .get(`http://localhost:5000/api/outages/2022-03-01&2022-03-18`)
+      .get(`http://localhost:5000/api/outages/2022-03-01&2022-03-26`)
       .then((res) => {
         this.setState({
           ...this.state,
@@ -40,16 +40,23 @@ export default class Dashboard extends Component {
 
     this.setState({ ...this.state, loadingOutages: false });
   }
-
+  handleColours(newColours) {
+    this.setState({ ...this.state, colours: newColours });
+  }
   render() {
     console.log(this.state);
     return (
       <>
-        <Summary
+        <OutageSummary
           loadingOutages={this.state.loadingOutages}
           outages={this.state.outages}
         />
-        <ColouredMap jaf="#e5eb34" mle="#eb3434" outages={this.state.outages} />
+        <OutageMap
+          outages={this.state.outages}
+          //colours={this.state.colours}
+          //handleColours={this.handleColours}
+        />
+        {/* <ColouredMap jaf="#e5eb34" mle="#eb3434" outages={this.state.outages} /> */}
       </>
     );
   }
