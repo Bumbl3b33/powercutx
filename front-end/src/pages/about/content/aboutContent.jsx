@@ -12,8 +12,10 @@ const AboutContent = () => {
         <Col xs={12} xl={7}>
           <p className="about-text">
             A weekend project of mine to help people get the information they
-            want, how they want. There's still plenty of features in the
-            pipelines so check back in a bit :)
+            want, how they want. You can view outages by district or in the
+            outage map. Submit your outages to help improve the data. <br />
+            There's still plenty of features in the pipelines so check back
+            soon. Made using React with 💜.
             <br />
             <br />
             Have a suggestion? Want to say Hi?

@@ -66,7 +66,7 @@ export default class Dashboard extends Component {
             </div>
           </Col>
           <Col xs={12} xl={3}>
-            <div className="test2">
+            <div className="outage-form">
               <OutageForm />
             </div>
           </Col>
