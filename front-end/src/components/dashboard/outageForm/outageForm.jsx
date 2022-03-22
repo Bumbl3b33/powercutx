@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "../../../common/loading";
 import { useMetadata } from "../../../contexts/DistrictsContext";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Card } from "react-bootstrap";
 
 const OutageForm = () => {
   const [myDistrict, setMyDistrict] = useState("1");
@@ -39,39 +39,45 @@ const OutageForm = () => {
     <>
       {loading && <Loading />}
       {!loading && (
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3">
-            <Form.Label htmlFor="enabledSelect">
-              Select Your District{" "}
-            </Form.Label>
-            <Form.Select
-              id="enabledSelect"
-              onChange={handleChange}
-              disabled={isDisabled}
-            >
-              {districts.map((district) => {
-                return (
-                  <option
-                    key={district?.DistrictId}
-                    value={district?.DistrictId}
-                  >
-                    {district?.DistrictName}
-                  </option>
-                );
-              })}
-            </Form.Select>
-            {/* <Form.Text className="text-muted">
+        <Card>
+          <Card.Header>Submit your Outage</Card.Header>
+          <Card.Body>
+            {/* <Card.Title>Select Your District</Card.Title> */}
+            <Form onSubmit={handleSubmit}>
+              <Form.Group className="mb-3">
+                <Form.Label htmlFor="enabledSelect">
+                  Select Your District{" "}
+                </Form.Label>
+                <Form.Select
+                  id="enabledSelect"
+                  onChange={handleChange}
+                  disabled={isDisabled}
+                >
+                  {districts.map((district) => {
+                    return (
+                      <option
+                        key={district?.DistrictId}
+                        value={district?.DistrictId}
+                      >
+                        {district?.DistrictName}
+                      </option>
+                    );
+                  })}
+                </Form.Select>
+                {/* <Form.Text className="text-muted">
             We do not collect your personal information
           </Form.Text> */}
-          </Form.Group>
-          <Button
-            type="submit"
-            variant={isDisabled ? "success" : "primary"}
-            disabled={isDisabled}
-          >
-            {isDisabled ? "Thanks for Submitting" : "Click to Submit"}
-          </Button>
-        </Form>
+              </Form.Group>
+              <Button
+                type="submit"
+                variant={isDisabled ? "success" : "primary"}
+                disabled={isDisabled}
+              >
+                {isDisabled ? "Thanks for Submitting" : "Click to Submit"}
+              </Button>
+            </Form>
+          </Card.Body>
+        </Card>
       )}
     </>
   );

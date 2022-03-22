@@ -38,7 +38,9 @@ class OutageMap extends React.Component {
   render() {
     return (
       <>
-        <h5 className="mytitle">Outage Map</h5>
+        <h5 id="map" className="mytitle">
+          Outage Map
+        </h5>
         <ColouredMap colours={this.state.colours} />;
       </>
     );

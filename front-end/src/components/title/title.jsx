@@ -1,15 +1,16 @@
 import "./title.css";
 import Button from "react-bootstrap/Button";
+import { Container } from "react-bootstrap";
 
 const Title = () => {
   return (
-    <div>
-      <div className="page-title">Powercutx</div>
+    <Container>
       <div className="page-desc">
-        See who else has no power in Sri Lanka. :( <br />
+        See who else has no power in our island nation (Sri Lanka) 🇱🇰
+        <br />
         Share your story{" "}
       </div>
-    </div>
+    </Container>
   );
 };
 

@@ -9,9 +9,9 @@ export default class OutageSummary extends Component {
     return (
       <>
         {this.props.loadingOutages && <Loading />}
-        <h5 className="mytable-title">
+        {/* <h5 className="mytable-title">
           Top {this.state.itemsToShow} Districts{" "}
-        </h5>
+        </h5> */}
         <table class="table table-striped table-hover" size="sm">
           <thead id="table-headers">
             <tr>

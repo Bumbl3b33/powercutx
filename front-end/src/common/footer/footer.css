@@ -1,0 +1,17 @@
+.myfooter {
+  position: fixed;
+  padding: 10px;
+  bottom: 0px;
+}
+
+.myleft-justified {
+  float: left;
+  padding-left: 2rem;
+  font-size: 10pt;
+}
+
+.myright-justified {
+  float: right;
+  padding-right: 2rem;
+  font-size: 10pt;
+}
