@@ -2,3 +2,14 @@
   font-family: "Roboto";
   font-style: normal;
 }
+
+.test {
+  margin: 10px;
+  background-color: rgb(228, 222, 222);
+  border-radius: 5%;
+}
+
+.test2 {
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+}

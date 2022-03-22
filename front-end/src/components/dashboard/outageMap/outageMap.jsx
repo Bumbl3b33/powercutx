@@ -1,6 +1,6 @@
 import React from "react";
 import ColouredMap from "../map/colouredMap";
-
+import "./outageMap.css";
 class OutageMap extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +27,7 @@ class OutageMap extends React.Component {
       | <=3     |   default |
       +---------+-----------+
       */
-      colour = Total > 5 ? "#FF0000" : Total > 3 ? "#FFFF00" : "";
+      colour = Total > 6 ? "#FF0000" : Total > 3 ? "#FFFF00" : "";
 
       //adding colour to list
       colours[districtCode] = colour;
@@ -36,7 +36,12 @@ class OutageMap extends React.Component {
   }
 
   render() {
-    return <ColouredMap colours={this.state.colours} />;
+    return (
+      <>
+        <h5 className="mytitle">Outage Map</h5>
+        <ColouredMap colours={this.state.colours} />;
+      </>
+    );
   }
 }
 

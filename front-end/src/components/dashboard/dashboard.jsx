@@ -3,6 +3,10 @@ import axios from "axios";
 import React, { Component } from "react";
 import OutageSummary from "./outageSummary/outageSummary";
 import OutageMap from "./outageMap/outageMap";
+import OutageForm from "./outageForm/outageForm";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 
 export default class Dashboard extends Component {
   state = {
@@ -44,20 +48,30 @@ export default class Dashboard extends Component {
     this.setState({ ...this.state, colours: newColours });
   }
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
-      <>
-        <OutageSummary
-          loadingOutages={this.state.loadingOutages}
-          outages={this.state.outages}
-        />
-        <OutageMap
-          outages={this.state.outages}
-          //colours={this.state.colours}
-          //handleColours={this.handleColours}
-        />
-        {/* <ColouredMap jaf="#e5eb34" mle="#eb3434" outages={this.state.outages} /> */}
-      </>
+      <Container>
+        <Row>
+          <Col xs={12} xl={3}>
+            <div>
+              <OutageSummary
+                loadingOutages={this.state.loadingOutages}
+                outages={this.state.outages}
+              />
+            </div>
+          </Col>
+          <Col xs={12} xl={6}>
+            <div className="test">
+              <OutageMap outages={this.state.outages} />
+            </div>
+          </Col>
+          <Col xs={12} xl={3}>
+            <div className="test2">
+              <OutageForm />
+            </div>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

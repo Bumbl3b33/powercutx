@@ -1,4 +1,5 @@
 import "./title.css";
+import Button from "react-bootstrap/Button";
 
 const Title = () => {
   return (
