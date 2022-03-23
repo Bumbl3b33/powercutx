@@ -18,7 +18,7 @@ const OutageForm = () => {
       DistrictId: districtId,
     });
     axios
-      .post("http://localhost:5000/api/outages", {
+      .post("https://powercutx-backend.azurewebsites.net/api/outages", {
         DistrictId: districtId,
       })
       .then((res) => {

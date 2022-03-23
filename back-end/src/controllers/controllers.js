@@ -49,4 +49,17 @@ const addOutage = async (req, res) => {
   }
 };
 
-module.exports = { getDistricts, getOutagesBetweenDates, addOutage };
+const getHealth = async (req, res) => {
+  try {
+    const data = {
+      uptime: process.uptime(),
+      message: "Ok",
+      date: new Date(),
+    };
+
+    res.status(200).send(data);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
+module.exports = { getDistricts, getOutagesBetweenDates, addOutage, getHealth };

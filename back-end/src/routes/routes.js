@@ -6,6 +6,7 @@ const {
   getDistricts,
   getOutagesBetweenDates,
   addOutage,
+  getHealth,
 } = require("../controllers/controllers");
 
 const router = Router();
@@ -28,4 +29,5 @@ router.get("/api/outages/:StartDate&:EndDate", getOutagesBetweenDates);
 /* Add Outage from user */
 router.post("/api/outages", addOutage);
 
+router.get("/health", getHealth);
 module.exports = router;

@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/b3e926af-13b3-4eee-ba11-c49667eedd39/resourceGroups/powercutx-prod/providers/Microsoft.Web/sites/powercutx-backend",
+    "appService.deploySubpath": "back-end"
+}

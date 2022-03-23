@@ -14,7 +14,7 @@ export const DistrictsProvider = ({ children }) => {
   useEffect(() => {
     async function fetchData(params) {
       axios
-        .get(`http://localhost:5000/api/districts`)
+        .get(`https://powercutx-backend.azurewebsites.net/api/districts`)
         .then((res) => {
           setDistricts(res.data);
         })

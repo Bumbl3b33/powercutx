@@ -30,7 +30,9 @@ export default class Dashboard extends Component {
     this.setState({ ...this.state, loadingOutages: true });
 
     axios
-      .get(`http://localhost:5000/api/outages/2022-03-01&2022-03-26`)
+      .get(
+        `https://powercutx-backend.azurewebsites.net/api/outages/2022-03-01&2022-03-26`
+      )
       .then((res) => {
         this.setState({
           ...this.state,
