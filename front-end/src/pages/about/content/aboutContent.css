@@ -2,7 +2,9 @@
   margin: 2.5rem;
   font-family: "Courier New", Courier, monospace;
 }
-
+.about-container {
+  padding-bottom: 2rem;
+}
 .about-text {
   margin: 2.5rem;
   font-size: 13pt;

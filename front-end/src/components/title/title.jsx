@@ -6,9 +6,9 @@ const Title = () => {
   return (
     <Container>
       <div className="page-desc">
-        See who else has no power in our island nation (Sri Lanka) 🇱🇰
+        See who else has no power in Sri Lanka.
         <br />
-        Share your story{" "}
+        <span className="text-subtitle text-bold">Share your story</span>
       </div>
     </Container>
   );

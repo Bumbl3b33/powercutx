@@ -25,7 +25,7 @@ export default class OutageSummary extends Component {
                 return (
                   <tr key={index}>
                     <td>{DistrictName}</td>
-                    <td>{Total}</td>
+                    <td className="text-center">{Total}</td>
                   </tr>
                 );
               }

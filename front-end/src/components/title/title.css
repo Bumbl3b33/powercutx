@@ -19,4 +19,15 @@
 .page-desc {
   margin-top: 3rem;
   margin-bottom: 2rem;
+  font-weight: lighter;
+  font-size: 20pt;
+}
+
+.text-subtitle {
+  font-style: italic;
+  font-size: 16pt;
+}
+
+.text-bold {
+  font-style: bold;
 }

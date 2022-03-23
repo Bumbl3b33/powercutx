@@ -14,8 +14,9 @@ const DonateContent = () => {
             Powercutx is a project rooted with the sole aim of enabling people
             to access information they demand readily and reliably. As a one-man
             team hosting, maintenance and adding Features to the project, it
-            requires resources. Donations show your interest and support and
-            help keep servers online. <br />
+            requires time and effort. Donations show your interest and support
+            and help keep servers online.
+            <br />
           </p>
         </Col>
       </Row>
